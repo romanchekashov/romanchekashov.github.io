@@ -1,4 +1,4 @@
 # romanchekashov.github.io
 
 #### My games:
-- [Asteroid Clash](/AsteroidClash/index.html)
+- [Asteroid Clash](https://romanchekashov.github.io/AsteroidClash/)
