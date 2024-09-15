@@ -59,6 +59,7 @@ default_texture_min_filter = linear
 default_texture_mag_filter = linear
 max_draw_calls = 1024
 max_characters = 8192
+max_font_batches = 128
 max_debug_vertices = 10000
 texture_profiles = /builtins/graphics/default.texture_profiles
 verify_graphics_calls = 1
@@ -102,6 +103,7 @@ max_count = 128
 max_count = 64
 max_particlefx_count = 64
 max_particle_count = 1024
+max_animation_count = 1024
 
 [collection]
 max_instances = 1024
@@ -122,13 +124,14 @@ pre_renderered_icons = 0
 bundle_identifier = com.britzl.publicexamples.rotate_and_move
 bundle_name = 
 infoplist = /builtins/manifests/ios/Info.plist
+privacymanifest = /builtins/manifests/ios/PrivacyInfo.xcprivacy
 default_language = en
 localizations = en
 
 [android]
 version_code = 1
 minimum_sdk_version = 19
-target_sdk_version = 33
+target_sdk_version = 34
 package = com.britzl.publicexamples.rotate_and_move
 gcm_sender_id = 
 manifest = /builtins/manifests/android/AndroidManifest.xml
@@ -138,10 +141,12 @@ immersive_mode = 0
 display_cutout = 1
 debuggable = 0
 proguard = 
+extract_native_libs = 1
 
 [osx]
 app_icon = 
 infoplist = /builtins/manifests/osx/Info.plist
+privacymanifest = /builtins/manifests/osx/PrivacyInfo.xcprivacy
 bundle_identifier = com.britzl.publicexamples.rotate_and_move
 bundle_name = 
 bundle_version = 1
@@ -157,7 +162,7 @@ heap_size = 256
 htmlfile = /client/engine_template.html
 cssfile = /builtins/manifests/web/light_theme.css
 archive_location_prefix = archive
-archive_location_suffix = ?v=0.2.0
+archive_location_suffix = ?v=0.2.1
 engine_arguments = --verify-graphics-calls=false
 wasm_streaming = 0
 show_fullscreen_button = 1
@@ -169,9 +174,6 @@ scale_mode = downscale_fit
 max_count = 128
 max_emitter_count = 64
 max_particle_count = 2048
-
-[iap]
-auto_finish_transactions = 1
 
 [network]
 http_timeout = 0
@@ -196,6 +198,7 @@ sleep_between_server_updates = 0
 [liveupdate]
 settings = /liveupdate.settings
 enabled = 1
+mount_on_start = 1
 
 [tilemap]
 max_count = 16
