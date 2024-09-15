@@ -1,12 +1,12 @@
 [project]
-title = Escape from Massacre
+title = EscapeFromMassacre
 version = 1.0
 write_log = 0
 compress_archive = 1
 publisher = unnamed
 developer = unnamed
 custom_resources = 
-title_as_file_name = EscapefromMassacre
+title_as_file_name = EscapeFromMassacre
 
 [display]
 width = 1136
