@@ -31,7 +31,7 @@
 */
 var CUSTOM_PARAMETERS = {
     archive_location_filter: function( path ) {
-        return ("archive" + path + "?v=0.2.2");
+        return ("archive" + path + "?v=0.2.3");
     },
     engine_arguments: ["--verify-graphics-calls=false",],
     custom_heap_size: 268435456,
@@ -209,8 +209,8 @@ var FileLoader = {
 
 
 var EngineLoader = {
-    wasm_size: 2375503,
-    wasmjs_size: 348669,
+    wasm_size: 2391767,
+    wasmjs_size: 348819,
     asmjs_size: 4000000,
     wasm_instantiate_progress: 0,
 
