@@ -181,7 +181,7 @@
 	<script id='engine-setup' type='text/javascript'>
 	var extra_params = {
 		archive_location_filter: function( path ) {
-			return ("archive" + path + "?v=0.2.4");
+			return ("archive" + path + "?v=0.2.5");
 		},
 		engine_arguments: ["--verify-graphics-calls=false",],
 		custom_heap_size: 268435456,
@@ -301,6 +301,10 @@
 		const BASE_ADDRESS = 'game.look.ovh';
 		// const BASE_ADDRESS = 'localhost';
 
+		let uidBoundToFastUnreliableConnection = false;
+		let uidBoundToWtIntervalKey;
+		let playerUid = +(sessionStorage.getItem('playerUid') ?? 0);
+
 		// Send data to game client
 		function addToEventLog(text) {
 			JsToDef.send("ServerMsg", text);
@@ -308,6 +312,7 @@
 
 		function WebSocketReliableConnectionSendData(rawData) {
 			log('[WS reliable]: ', rawData);
+			if (playerUid > 0 && rawData.startsWith('CONNECT_ME')) rawData = playerUid + '.' + rawData;
 			socket.send(rawData);
 		}
 
@@ -327,14 +332,9 @@
 			}
 		}
 
-
-		let uidBoundToFastUnreliableConnection = false;
-		let uidBoundToWtIntervalKey;
-		let playerUid = +(sessionStorage.getItem('playerUid') ?? 0);
-
 		function onMsgFromWebTransport(text) {
-			if (text === 'PING') {
-				WebTransportSendData('PING');
+			if (text === 'WT_PING') {
+				WebTransportSendData('WT_PONG');
 				return;
 			}
 

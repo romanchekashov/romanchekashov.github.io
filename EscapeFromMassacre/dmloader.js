@@ -31,7 +31,7 @@
 */
 var CUSTOM_PARAMETERS = {
     archive_location_filter: function( path ) {
-        return ("archive" + path + "?v=0.2.4");
+        return ("archive" + path + "?v=0.2.5");
     },
     engine_arguments: ["--verify-graphics-calls=false",],
     custom_heap_size: 268435456,
