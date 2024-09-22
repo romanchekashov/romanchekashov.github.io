@@ -181,7 +181,7 @@
 	<script id='engine-setup' type='text/javascript'>
 	var extra_params = {
 		archive_location_filter: function( path ) {
-			return ("archive" + path + "?v=0.2.5");
+			return ("archive" + path + "?v=0.2.6");
 		},
 		engine_arguments: ["--verify-graphics-calls=false",],
 		custom_heap_size: 268435456,
@@ -386,7 +386,7 @@
 						let sUid = data.split('.')[0];
 						sessionStorage.setItem('playerUid', sUid);
 						playerUid = +sUid;
-						// await webTransportСonnect();
+						await webTransportСonnect();
 					}
 				});
 
