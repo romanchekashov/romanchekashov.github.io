@@ -181,7 +181,7 @@
 	<script id='engine-setup' type='text/javascript'>
 	var extra_params = {
 		archive_location_filter: function( path ) {
-			return ("archive" + path + "?v=0.2.7");
+			return ("archive" + path + "?v=0.2.8");
 		},
 		engine_arguments: ["--verify-graphics-calls=false",],
 		custom_heap_size: 268435456,
@@ -386,7 +386,8 @@
 						let sUid = data.split('.')[0];
 						sessionStorage.setItem('playerUid', sUid);
 						playerUid = +sUid;
-						await webTransportСonnect();
+						// TODO: WebTransport doesn't work properly need to check(loss of input from player + after reconnect player not visible)
+						// await webTransportСonnect();
 					}
 				});
 
