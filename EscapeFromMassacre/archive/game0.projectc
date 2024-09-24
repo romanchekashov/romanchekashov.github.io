@@ -162,13 +162,13 @@ heap_size = 256
 htmlfile = /client/engine_template.html
 cssfile = /builtins/manifests/web/light_theme.css
 archive_location_prefix = archive
-archive_location_suffix = ?v=0.2.8
+archive_location_suffix = ?v=0.2.9
 engine_arguments = --verify-graphics-calls=false
 wasm_streaming = 0
-show_fullscreen_button = 1
-show_made_with_defold = 1
+show_fullscreen_button = 0
+show_made_with_defold = 0
 show_console_banner = 1
-scale_mode = downscale_fit
+scale_mode = fit
 
 [particle_fx]
 max_count = 128
