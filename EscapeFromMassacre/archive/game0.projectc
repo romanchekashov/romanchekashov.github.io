@@ -162,7 +162,7 @@ heap_size = 256
 htmlfile = /client/engine_template.html
 cssfile = /builtins/manifests/web/light_theme.css
 archive_location_prefix = archive
-archive_location_suffix = ?v=0.3.0
+archive_location_suffix = ?v=0.3.1
 engine_arguments = --verify-graphics-calls=false
 wasm_streaming = 0
 show_fullscreen_button = 0
